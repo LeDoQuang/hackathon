@@ -1,0 +1,19 @@
+{
+  "name": "secondkey-unlocked",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "check": "node --check src/main.js",
+    "setup:dpop": "node scripts/install-dpop.mjs",
+    "check:dpop": "node scripts/check-dpop.mjs"
+  },
+  "dependencies": {
+    "@tidecloak/js": "latest"
+  },
+  "devDependencies": {
+    "vite": "^7.0.0"
+  }
+}

@@ -1,0 +1,35 @@
+1
+00:00:00,000 --> 00:00:09,000
+Who decides who may open a scholarship application? In many systems, one administrator can make that decision alone.
+
+2
+00:00:09,000 --> 00:00:18,000
+A privileged account can change reviewer permissions. That is a governance problem, not just a login problem.
+
+3
+00:00:18,000 --> 00:00:28,000
+SecondKey combines TideCloak sign-in with an independent server-side access check for a fictional scholarship case.
+
+4
+00:00:28,000 --> 00:00:37,000
+The local prototype successfully authenticated through a real TideCloak development realm named secondkey.
+
+5
+00:00:37,000 --> 00:00:48,000
+The signed-in user did not hold the reviewer role. FastAPI refused access with HTTP 403 Forbidden.
+
+6
+00:00:48,000 --> 00:00:59,000
+A three-administrator Tide QEA workflow would require two independent approvals before a sensitive role grant.
+
+7
+00:00:59,000 --> 00:01:09,000
+Tide login worked, a signed token reached the API, and missing reviewer permission produced a real 403 response.
+
+8
+00:01:09,000 --> 00:01:20,000
+The second administrator approval, a successful role grant, and the resulting 200 response are not completed in this build.
+
+9
+00:01:20,000 --> 00:01:28,000
+SecondKey makes the trust problem visible. The next milestone is a complete multi-administrator QEA demonstration.
